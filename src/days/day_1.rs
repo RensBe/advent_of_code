@@ -1,13 +1,15 @@
 use std::fs;
 
+use crate::Task;
+
 const FILE_PATH: &str = "src/inputs/input_day_1.txt";
 
-pub fn day_1(task: u8) -> u32 {
+pub fn day_1(task: Task) -> u32 {
     // define the numbers that can be replaced
     let numbers: Vec<(&str, &str)>;
 
     match task {
-        1 => numbers = vec![
+        Task::TASK1 => numbers = vec![
             ("0", "0"), 
             ("1", "1"), 
             ("2", "2"), 
@@ -19,7 +21,7 @@ pub fn day_1(task: u8) -> u32 {
             ("8", "8"), 
             ("9", "9")
         ],
-        _ => numbers = vec![
+        Task::TASK2 => numbers = vec![
             ("0", "0"), 
             ("1", "1"), 
             ("2", "2"), 
@@ -49,7 +51,7 @@ pub fn day_1(task: u8) -> u32 {
 fn day_1_task(numbers: Vec<(&str, &str)>) -> u32 {
     let read = fs::read_to_string(FILE_PATH).unwrap();
 
-    let contents: Vec<u32> = read.lines().into_iter()
+    return read.lines().into_iter()
         .map(
             |line| 
             {
@@ -75,7 +77,5 @@ fn day_1_task(numbers: Vec<(&str, &str)>) -> u32 {
 
                 return x.parse::<u32>().unwrap();
             }
-        ).collect();
-
-    return contents.iter().sum();
+        ).sum();
 }

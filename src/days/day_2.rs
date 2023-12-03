@@ -1,11 +1,13 @@
 use std::fs;
 
+use crate::Task;
+
 const FILE_PATH: &str = "src/inputs/input_day_2.txt";
 
-pub fn day_2(task: u8) -> u32 {
+pub fn day_2(task: Task) -> u32 {
     match task {
-        1 => day_2_task_1(),
-        _ => day_2_task_2()
+        Task::TASK1 => day_2_task_1(),
+        Task::TASK2 => day_2_task_2()
     }
 }
 
@@ -16,7 +18,7 @@ fn day_2_task_1() -> u32 {
     let max_green: u32 = 13;
     let max_blue: u32 = 14;
 
-    let contents: Vec<u32> = read.lines().into_iter()
+    return read.lines().into_iter()
         .map(
             |line|
             {
@@ -48,15 +50,13 @@ fn day_2_task_1() -> u32 {
 
                 return iter.clone();
             }
-        ).collect();
-
-    return contents.iter().sum();
+        ).sum();
 }
 
 fn day_2_task_2() -> u32 {
     let read = fs::read_to_string(FILE_PATH).unwrap();
 
-    let contents: Vec<u32> = read.lines().into_iter()
+    return read.lines().into_iter()
         .map(
             |line|
             {
@@ -85,7 +85,5 @@ fn day_2_task_2() -> u32 {
 
                 return min_red * min_green * min_blue;
             }
-        ).collect();
-
-    return contents.iter().sum();
+        ).sum();
 }
