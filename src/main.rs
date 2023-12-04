@@ -19,6 +19,11 @@ fn main() {
     // println!("Result: {}, Duration: {}", day_2(Task::TASK2), now.elapsed().unwrap().as_micros());
     // println!("Result: {}, Duration: {}", day_3(Task::TASK1), now.elapsed().unwrap().as_micros());
     // println!("Result: {}, Duration: {}", day_3(Task::TASK2), now.elapsed().unwrap().as_micros());
-    println!("Result: {}, Duration: {}", day_4(Task::TASK1), now.elapsed().unwrap().as_micros());
+    // println!("Result: {}, Duration: {}", day_4(Task::TASK1), now.elapsed().unwrap().as_micros());
     println!("Result: {}, Duration: {}", day_4(Task::TASK2), now.elapsed().unwrap().as_micros());
+
+    // let mut xs = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // for x in xs {
+    //     print!("{x}; ");
+    // }
 }
