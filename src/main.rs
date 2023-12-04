@@ -1,6 +1,6 @@
 use std::time::SystemTime;
 
-use crate::days::day_3::day_3;
+use crate::days::{day_3::day_3, day_1::day_1, day_2::day_2, day_4::day_4};
 
 pub mod days;
 
@@ -13,7 +13,12 @@ fn main() {
     let now = SystemTime::now();
 
     //other();
-    println!("result: {}", day_3(Task::TASK2));
-    
-    println!("duration: {}", now.elapsed().unwrap().as_micros())
+    // println!("Result: {}, Duration: {}", day_1(Task::TASK1), now.elapsed().unwrap().as_micros());
+    // println!("Result: {}, Duration: {}", day_1(Task::TASK2), now.elapsed().unwrap().as_micros());
+    // println!("Result: {}, Duration: {}", day_2(Task::TASK1), now.elapsed().unwrap().as_micros());
+    // println!("Result: {}, Duration: {}", day_2(Task::TASK2), now.elapsed().unwrap().as_micros());
+    // println!("Result: {}, Duration: {}", day_3(Task::TASK1), now.elapsed().unwrap().as_micros());
+    // println!("Result: {}, Duration: {}", day_3(Task::TASK2), now.elapsed().unwrap().as_micros());
+    println!("Result: {}, Duration: {}", day_4(Task::TASK1), now.elapsed().unwrap().as_micros());
+    println!("Result: {}, Duration: {}", day_4(Task::TASK2), now.elapsed().unwrap().as_micros());
 }
