@@ -6,3 +6,5 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+darkbird = "6.2.0"
+num-integer = "0.1.45"

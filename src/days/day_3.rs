@@ -31,7 +31,7 @@ fn day_3_task_1() -> u32 {
     // Keep track of the x (Row)
     let mut x = 0;
 
-    // Go through all the lines in the document
+    // Go through all the lines in the document and fill both vectors
     for line in read.lines() {
         // These values are necesairy for building the numbers in the file
         let mut last_numeric = false;

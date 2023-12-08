@@ -1,6 +1,6 @@
 use std::time::SystemTime;
 
-use crate::days::{day_1::day_1, day_2::day_2, day_3::day_3, day_4::day_4, day_5::day_5, day_6::day_6, day_7::day_7};
+use crate::days::{day_1::day_1, day_2::day_2, day_3::day_3, day_4::day_4, day_5::day_5, day_6::day_6, day_7::day_7, day_8::day_8};
 
 pub mod days;
 
@@ -25,7 +25,9 @@ fn main() {
     // println!("Result: {}, Duration: {}", day_6(Task::TASK1), now.elapsed().unwrap().as_micros());
     // println!("Result: {}, Duration: {}", day_6(Task::TASK2), now.elapsed().unwrap().as_micros());
     // println!("Result: {}, Duration: {}", day_7(Task::TASK1), now.elapsed().unwrap().as_micros());
-    println!("Result: {}, Duration: {}", day_7(Task::TASK2), now.elapsed().unwrap().as_micros());
+    // println!("Result: {}, Duration: {}", day_7(Task::TASK2), now.elapsed().unwrap().as_micros());
+    // println!("Result: {}, Duration: {}", day_8(Task::TASK1), now.elapsed().unwrap().as_micros());
+    println!("Result: {}, Duration: {}", day_8(Task::TASK2), now.elapsed().unwrap().as_micros());
 
     // let mut xs = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     // for x in xs {
